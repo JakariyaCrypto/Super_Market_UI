@@ -1,0 +1,183 @@
+/* All resposive css here */
+/* xl Device */
+@media (min-width : 1200px) and (max-width : 1500px) {
+.col-xl-4.col-lg-4.col-md-6.col-sm-12.hide {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+}
+/* resposive for Lg Device */
+@media all and (max-width :1200px) {
+.left-area ul li {
+    font-size: 12px;
+	}
+.ritht-area ul li a {
+    font-size: 15px;
+}
+.ritht-area ul li {
+    margin-left: 18px;
+    display: inline;
+}
+.cart_icon ul li a {
+    font-size: 19px;
+}
+.phone ul li {
+    font-size: 15px;
+}
+.logo-area h1 {
+    font-size: 33px;
+    text-align: center;
+}
+.search-area input[type="serach"] {
+    height: 42px;
+}
+button.search-button {
+height: 43px;
+}
+.search-area {
+    text-align: center;
+	margin-top: 17px;
+}
+.search-area input[type="serach"] {
+    height: 42px;
+    width: 360px;
+}
+ul.navbar li {
+	padding: 15px;
+}
+ul.navbar li a {
+    font-size: 16px;
+}
+.title h5 {
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+.title a p {
+    font-size: 11px;
+	line-height: 31px;
+}
+
+ul.navbar li:hover .mega-menu ul {
+    bottom: auto;
+}
+.col-xl-4.col-lg-4.col-md-6.col-sm-12.hide {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+span.new {   
+    left: 71%;
+    font-size: 11px;
+}
+.add-cart a {
+    padding: 2px 9px;
+}
+.subcribe-content {
+    text-align: center;
+}
+
+
+ul.address li i.fas.fa-map-marker-alt {
+    font-size: 21px;
+}
+ul.address li i.fas.fa-envelope {
+	 font-size: 21px;
+}
+ul.address li i.fas.fa-phone-alt {
+	 font-size: 21px;
+}
+}
+@media all and (max-width :990px) {
+
+.col-xl-4.col-lg-4.col-md-6.col-sm-12.hide {
+    visibility: visible;
+    width: 100%;
+    height: auto;
+}
+ul.address li {
+    text-align: left;
+    padding-left: 65px;
+}
+.footer-title h4 {
+    margin-left: 65px;
+}
+.footer-main {
+
+    padding: 29px;
+
+}
+}
+
+@media all and (max-width : 764px){
+.left-area ul {
+    text-align: center;
+}
+.ritht-area ul {
+    margin-top: 0px;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+.phone ul {
+    text-align: center;
+    margin-bottom: 15px;
+}
+ul.navbar li a {
+    font-size: 14px;
+}
+
+ul.navbar li {
+    padding: 7px;
+}
+
+.title h5 {
+    font-size: 12px;
+}
+.col-xl-4.col-lg-4.col-md-6.col-sm-12.hide {
+    visibility: visible;
+    width: 100%;
+    height: auto;
+}
+.product-banner {
+
+    margin-top: 20px;
+
+}
+.subcribe-content input[type="text"] {
+    width: 339px;
+}
+
+ul.address li {
+    text-align: left;
+    padding-left: 10em;
+}
+.footer-title h4 {
+
+    text-align: center;
+    margin-top: 23px;
+    margin-right: 186px;
+    padding-bottom: 10px;
+}
+.card-icon {
+    text-align: center;
+}
+.social-icon ul {
+    text-align: center;
+}
+}
+
+/* resposive for Md Device */
+@media(min-width:768px) and (max-width:991px){
+
+}
+/* resposive for Extra Small Device */
+@media(max-width:764){
+
+}
+/* resposive for Small  Device  / 550px*/
+@media only screen and(min-width:576px) and (max-width:767px){
+
+}

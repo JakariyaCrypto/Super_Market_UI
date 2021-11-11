@@ -1,0 +1,1188 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* my short css class */
+.mt{
+	margin-top:50px
+}
+.mb{
+	margin-bottom:50px
+}
+.ul-margin{margin:0px}
+
+
+/* start here header area */
+.container {
+    padding: 0;
+}
+.header-area {
+    background: #333333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.left-area ul {
+    margin: 0;
+    padding: 0;
+}
+.left-area ul li {
+    display: inline;
+    margin-left: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+.left-area ul li a {
+    color: #fe9126;
+    text-decoration: none;
+    font-weight: 600;
+}
+.ritht-area ul li {
+    margin-left: 40px;
+    display: inline;
+}
+.ritht-area ul {
+    margin: 0;
+}
+.ritht-area ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.left-area ul li {
+    display: inline;
+    margin-left: 10px;
+}
+.cart_icon ul li {
+    display: block;
+}
+
+.cart_icon ul li a {
+    color: white;
+    font-size: 21px;
+}
+.cart_icon ul{
+    margin: 0;
+}
+/* menu top css */
+.manu-top {
+    padding: 2em 0;
+}
+.logo-area {
+    text-align: right;
+}
+.logo-area h1 {
+    margin: 0;
+}
+.logo-area h1 a {
+    text-decoration: none;
+    color: #fe9126;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+.ul-padding{padding:0}
+.phone ul li {
+    display: inline;
+    font-size: 16px;
+    font-weight: 600;
+}
+.phone {
+    padding-top: 14px;
+}
+.search-area input[type="serach"]::placeholder {
+    color: black;
+    padding-left: 10px;
+    font-weight: 500;
+}
+.search-area input[type="serach"] {
+    width: 251px;
+height: 45px;
+}
+.search-area {
+    text-align: right;
+}
+button.search-button {
+    background: #fe9126;
+    padding: 0;
+    margin: 0;
+    width: 42px;
+    height: 46px;
+    border: 1px solid #ebebeb;
+}
+.search-area i {
+    font-size: 20px;
+    color: white;
+    padding: 8px 4px;
+}
+ /* main menu css */
+ul.navbar {
+    margin: 0;
+    display: inline;
+}
+.main-menu {
+    text-align: left;
+    background: #fe9126;
+
+}
+ul.navbar li {
+    padding: 2em;
+    display: inline-block;
+}
+ul.navbar li a {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+   text-transform: uppercase;
+}
+ul.navbar >li:hover{background:#e8a016; color:red}
+
+/* mega munu */
+ul.navbar.ul-margin.ul-padding {
+    position: static;
+}
+.mega-menu ul {
+	z-index: 99;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: black;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 110%;
+    opacity: 0;
+    visibility: hidden;
+	transition:.3s;
+}
+ul.navbar li:hover .mega-menu ul {
+    opacity: 100%;
+    visibility: visible;
+    top: 100%;
+    bottom: -303%;
+}
+li.mega-menu-item {
+    width: 20%;
+    float: left;
+}
+.mega-menu {
+    text-align: center;
+    width: 100%;
+}
+li.mega-menu-item1 {
+    width: 20%;
+    float: left;
+}
+li.mega-menu-item2 {
+    width: 20%;
+    float: left;
+}
+li.mega-menu-item3 {
+    width: 20%;
+    float: left;
+}
+li.mega-menu-item4 {
+    width: 20%;
+    float: left;
+}
+.title a p {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.title a> p:hover{color:#fe9126;font-weight:600;}
+.title h5 {
+    text-transform: uppercase;
+    color: #fe9126;
+    text-align: center;
+    border-bottom: 1px solid #fe9126;
+    padding-bottom: 6px;
+    font-size: 18px;
+}
+.title img {
+    width: 100%;
+    padding: 10px;
+}
+.title1 img {
+    width: 100%;
+    height: 274px;
+}
+strong.discoutn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 15%;
+    color: #020810;
+    font-weight: 800;
+    font-size: 17px;
+}
+.menu-img {
+    position: relative;
+}
+/* slider  */
+h4.carousel-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    top: 25%;
+    font-size: 34px;
+    text-align: center;
+}
+
+/* tab nav tab css */
+div#nav-tab {
+       background: #f2f2f2;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background: #fe9126;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background: #fe9126;
+	 padding-top: 15px;
+    padding-bottom: 15px;
+}
+.nav-justified .nav-item {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+a#nav-home-tab:hover {
+    background: #fe9126;
+}
+a#nav-profile-tab:hover {
+	 background: #fe9126;
+}
+/* slider down area css */
+.tab-head-line {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+	margin-bottom: 130px;	
+}
+.tab-head-line:before {
+    width: 412px;
+    height: 4px;
+    content: '';
+    left: 33%;
+    right: 0;
+    top: 140%;
+    background: black;
+    position: absolute;
+}
+li.price span {
+    font-size: 20px;
+    font-weight: 600;
+}
+.tab-head-line h3.tab-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+.slider-down {
+    border: 1px solid;
+}
+.slider-down-area.mb.mt {
+    padding-bottom: 50px;
+    background: #f2f2f2;
+}
+.tab-title p {
+    padding: 10px 28px;
+}
+.tab-title h5 {
+    padding: 23px 29px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.tab-cart {
+    border: 1px solid #fbd6d6;
+    text-align: center;
+    background: white;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    position: relative;
+    z-index: 0;
+	margin-right: 15px;
+}
+.tab-cart-img li {
+    display: block;
+    line-height: 41px;
+}
+.tab-cart-img img {
+    margin-top: 42px;
+    margin-bottom: 20px;
+}
+.add-cart a {
+    text-decoration: none;
+    font-size: 19px;
+    padding: 3px 72px;
+    background: #fe9126;
+    color: black;
+}
+.add-cart {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+	
+}
+.add-cart a:hover {
+    background: green;
+    transition: .3s;
+    color: white;
+    font-weight: 700;
+}
+.add-cart a:hover {
+    background: green;
+    transition: .3s;
+    color: white;
+    font-weight: 700;
+}
+.tab-hover-content {
+    position: absolute;
+    left: 0;
+    right:0;
+	bottom: 0;
+    top: 0%;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 0;
+}
+.tab-cart:hover .tab-hover-content{
+	visibility:visible;
+	opacity:0.7;
+	z-index:99;
+}
+.tab-cart-new {
+    border: 1px solid #fbd6d6;
+    text-align: center;
+    background: white;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+}
+.tab-cart-new:hover .tab-hover-content{
+	visibility:visible;
+	opacity:0.7;
+	z-index:99;
+}
+.tab-hover-text {
+    color: white;
+    font-size: 16px;
+    margin-top: 50px;
+    font-weight: 600;
+    padding: 5px;
+}
+li.wish-icon {
+    display: inline-block;
+    width: 50px;
+    height: 76px;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+}
+.cart-button {
+    margin-top: 30px;
+}
+.cart-button a {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    background: white;
+    text-decoration: none;
+    padding: 10px 57px;
+}
+
+li.wish-icon a {
+    font-size: 50px;
+    color: white;
+}
+
+/* product down slide */
+div#carousel-product-down {
+    height: 250px;
+}
+
+/* product banner css */
+img.img-slide {
+    height: 250px;
+}
+.product-banner1 {
+    width:  49%;
+    float: left;
+}
+.divide-banner {
+    margin-top: 20px;
+    width: 100%;
+}
+.product-banner2 {
+    width: 49%;
+    float: right;
+}
+.product-banner1 img {
+    width: 100%;
+}
+.product-banner2 img {
+    width: 100%;
+}
+.product-banner img {
+    max-width: 100%;
+}
+/* subscribe area css */
+.subscribe-area.mb {
+    height: 400px;
+    position: relative;
+	    z-index: 0;
+}
+.subscribe-area.mb:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+	opacity: .8;
+}
+.subcribe-content input[type="text"] {
+    width: 400px;
+    height: 49px;
+    background: transparent;
+    border: 1px solid white;
+    margin-top: 10px;
+}
+.subcribe-content {
+    margin-top: 182px;
+}
+.subcribe-content input[type="submit"] {
+    font-size: 20px;
+    background: #fe9126;
+    border: none;
+    height: 49px;
+    width: 86px;
+    margin-top: 10px;
+}
+.subcribe-content input[type="text"]::placeholder {
+    color: white;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* offer product area css */
+.offer-product {
+    background: #f2f2f2;
+    padding-bottom: 50px;
+}
+.offer-product-title {
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 106px;
+}
+h3.title-offer {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    display: inline;
+}
+span.new {
+    position: absolute;
+    right: 0;
+    left: 76%;
+    font-size: 21px;
+    font-weight: 800;
+    color: #fe9126;
+    background: black;
+    padding: 3px 5px;
+}
+
+/* footer area css */
+.footer-main {
+    padding-top: 80px;
+    background: #2b2a2a;
+}
+.footer-content {
+    color: white;
+}
+.footer-title {
+    color: white;
+}
+ul.address li {
+    list-style-type: none;
+    color: #a3a3a1;
+}
+ul.address {
+    margin: 0;
+    padding: 0;
+}
+ul.address li i.fas.fa-phone-alt {
+    font-size: 30px;
+    border: 1px solid;
+    padding: 10px;
+    margin-right: 10px;
+    color: #fe9126;
+}
+ul.address li i.fas.fa-envelope {
+    font-size: 30px;
+    border: 1px solid;
+    padding: 10px;
+    margin-right: 10px;
+    color: #fe9126;
+	margin-bottom: 23px;
+}
+ul.address li i.fas.fa-map-marker-alt {
+    font-size: 30px;
+    border: 1px solid;
+    padding: 10px;
+    margin-right: 10px;
+    color: #fe9126;
+}
+ul.address li span {
+    display: block;
+    margin-left: 55px;
+}
+.footer-title h4 {
+    padding-bottom: 40px;
+}
+ul.address li i.fa.fa-arrow-right {
+    font-size: 20px;
+    color: #fe8b28;
+    line-height: 48px;
+}
+ul.address li a {
+    color: #a7a0a0;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+ul.address li a:hover {
+    font-size: 19px;
+    color: white;
+}
+/* footer css */
+.footer {
+    background: #383434;
+    color: white;
+}
+.social-icon ul {
+    padding-top: 20px;
+}
+.social-icon ul li {
+    display: inline-block;
+}
+.social-icon ul li i.fab.fa-facebook {
+    font-size: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+}
+.social-icon ul li i.fab.fa-twitter {
+    font-size: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+}
+.social-icon ul li i.fa-github {
+    font-size: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+}
+.social-icon ul li i.fa-instagram {
+    font-size: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+}
+.card-icon {
+    text-align: right;
+}
+.card-icon ul li {
+    display: inline-block;
+}
+.card-icon ul {
+    padding-top: 20px;
+}
+.social-icon ul li strong {
+    color: #a5a4a4;
+}
+.social-icon ul li span {
+    color: #e9d9d9;
+    font-size: 20px;
+}
+/* page-products  css */
+.category-sidebar {
+    border: 1px solid;
+    margin-top: 20px;
+}
+h5.category-title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    background: #f0eeee;
+    padding: 18px;
+}
+.category-sidebar ul li a i {
+    font-size: 16px;
+    padding-right: 10px;
+    color: #fe9126;
+    line-height: 34px;
+}
+.category-sidebar ul li {
+    display: block;
+
+}
+.sedebar-title{
+	padding-left: 50px;
+}
+.category-sidebar ul li a {
+    color: #a89f9f;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.category-sidebar ul li a:hover{ font-size:18px; transition:.2s; color:black}
+/*right-product-top top */
+.right-product-top {
+    width: 100%;
+	display:inline-block;
+    margin-bottom: 25px;
+}
+.sorting-product {
+    width: 35%;
+    float: right;
+}
+.item-show {
+    width: 26%;
+    float: right;
+}
+.sorting-product select {
+    height: 43px;
+    width: 224px;
+    padding-left: 5px;
+}
+.item-show select {
+    height: 43px;
+    width: 183px;
+	padding-left: 5px;
+}
+
+span.new-title {
+    position: absolute;
+    right: 0;
+    left: 66%;
+    font-size: 21px;
+    font-weight: 800;
+    color: #fe9126;
+	background: #f1f17e;
+    padding: 3px 5px;
+}
+.hover-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0%;
+	background: #fe9126;
+    width: 100%;
+	height: 82%;
+    opacity: 100%;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 0;
+}
+.tab-cart-new:hover .hover-content {
+    visibility: visible;
+    opacity: 100%;
+    z-index: 99;
+}
+
+/* detais  css */
+	/* list-side css start */
+	div#myTabContent {
+    padding-top: 54px;
+}
+.list-side-img {
+    background: #fbfbf6;
+    margin-top: 22px;
+}
+li.tab-img {
+    width: 100%;
+    background: #fbfbf6;
+    margin-bottom: 10px;
+}
+.list-side-img img {
+    width: 100%;
+}
+ul#myTab {
+    display: inline-block;
+}
+li.tab-img {
+    width: 100%;
+}
+a#home-tab {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 0;
+}
+
+.product-detail-content {
+    margin-top: 30px;
+}
+h5.price {
+    padding: 10px 5px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.quantity li {
+    list-style-type: none;
+}
+.quantity select {
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+span.quantity {
+    font-size: 19px;
+    font-weight: 600;
+}
+.size h4.size-title {
+    padding-bottom: 10px;
+}
+ul.shaire-media {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+.detail-button {
+    margin-top: 20px;
+}
+ul.shaire-media li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.detail-button a {
+    font-size: 20px;
+    background: #f8b131;
+    padding: 4px 11px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+ul.shaire-media li a i.fab.fa-facebook {
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+}
+ul.shaire-media li a i.fab.fa-twitter {
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+}
+ul.shaire-media li a i.fab.fa-github {
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+}
+ul.shaire-media li a i.fab.fa-linkedin {
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+}
+i.fa.fa-star.blue-star:hover {
+    color: ;
+    color: #f8b131;
+}
+ul#myTab {
+    display: flex;
+}
+li.nav-item.background {
+    margin-left: 36px;
+}
+li.nav-item.background:first-child {
+    margin-left: 0;
+}
+ul.background {
+    background: #f8b131;
+}
+div#myTabContent {
+    border: 1px solid;
+    padding-top: 54px;
+}
+div#myTabContent {
+    border: 1px solid #f3f0f0;
+    padding-top: 54px;
+    padding: 20px 15px;
+}
+div#myTabContent {
+    border: 4px solid #f3f0f0;
+    padding-top: 54px;
+    padding: 20px 15px;
+	margin-bottom:15px;
+}
+.single-img-down {
+    margin-bottom: 20px;
+}
+a#home-tab {
+    margin: 0;
+    padding: 9px;
+}
+a#profile-tab{
+	margin: 0;
+    padding: 9px;
+}
+a#contact-tab{
+	margin: 0;
+    padding: 9px;
+}
+
+/* tab-commetn-content */
+
+.comment-tab-content input[type="text"] {
+    width: 100%;
+    height: 47px;
+    margin-bottom: 14px;
+}
+
+/* tab-area css */
+.tab-area.mt.pt {
+    background: #f2f2f2;
+    margin-bottom: 70px;
+}
+.tab-border {
+    border: 1px solid white;
+}
+.tab-border nav {
+    border-bottom: 1px solid #ffffff;
+}
+.tab-area.mt.pt {
+    padding-top: 50px;
+    background: #f2f2f2;
+    margin-bottom: 70px;
+    padding-bottom: 40px;
+}
+h2.title {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 69px;
+    padding-top: 30px;
+    font-weight: 700;
+    position: relative;
+}
+h2.title:before {
+    content: '';
+    width: 23%;
+    height: 2px;
+    background: #fe9126;
+    left: 38%;
+    right: 50%;
+    bottom: 0;
+    top: 57%;
+    position: absolute;
+}
+p.tab-content-pragraph {
+    text-align: left;
+}
+h3.tab-content-title {
+    text-align: left;
+}
+
+.tab-product.pt.mt {
+    padding: 20px;
+}
+
+
+.sub-slider {
+    width: 100%;
+    height: 300px;
+}
